@@ -157,7 +157,10 @@
     cell.followersUnitLabel.font    = [UIFont fontWithName:@"Aller-Light" size:10];
     cell.followingUnitLabel.text    = @"Following";
     cell.followingUnitLabel.font    = [UIFont fontWithName:@"Aller-Light" size:10];
-    
+    cell.followersBarImage.image    = [UIImage imageNamed:@"followers-bar@2x.png"];
+    cell.followingImage.image    = [UIImage imageNamed:@"following-button@2x.png"];
+    cell.colorgraphicImage.image    = [UIImage imageNamed:@"colour-bar_test@2x.png"];
+        
     // Colorgraphic section
 
 //   Custom colorgraphic will be here

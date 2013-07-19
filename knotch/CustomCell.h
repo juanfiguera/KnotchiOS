@@ -28,6 +28,7 @@
 @property (retain, nonatomic) IBOutlet UIImageView *followingImage;
 // Colorgraphic
 
+@property (retain, nonatomic) IBOutlet UIImageView *colorgraphicImage;
 
 
 // *** Knotch Cell ***

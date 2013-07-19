@@ -44,6 +44,7 @@
     [_followingNumberLabel release];
     [_followingUnitLabel release];
     [_followersBarImage release];
+    [_colorgraphicImage release];
     [super dealloc];
 }
 @end
