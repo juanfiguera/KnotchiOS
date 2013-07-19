@@ -195,7 +195,6 @@
 		4A226B7A1793974F00F9A12B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				4A226CA91798F02500F9A12B /* New Group */,
 				4A226BE717954CF000F9A12B /* lato */,
 				4A226BF317954CF000F9A12B /* Aller */,
 				4A226BB3179398C000F9A12B /* Assets */,
@@ -283,13 +282,6 @@
 			);
 			name = Aller;
 			path = ../Aller;
-			sourceTree = "<group>";
-		};
-		4A226CA91798F02500F9A12B /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
