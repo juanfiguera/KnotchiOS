@@ -29,11 +29,10 @@
 {
     [super viewDidLoad];
 
-    
-    self.profileDictionary =  [[NSDictionary alloc] init];
-    // Initialize arrays
+    // Initialize arrays and dictionary
     self.profileArrayFromAFNetworking =  [[NSArray alloc] init];
     self.knotchesArrayFromAFNetworking = [[NSArray alloc] init];
+    self.profileDictionary =  [[NSDictionary alloc] init];
 	
     // Initialize AFNetworking
     NSURL *url = [NSURL URLWithString:@"http://dev.knotch.it:8080/miniProject/user_feed/500e3b57bbcd08696800000a/10"];
