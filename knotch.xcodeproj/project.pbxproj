@@ -195,21 +195,14 @@
 		4A226B7A1793974F00F9A12B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4A226CA91798F02500F9A12B /* New Group */,
 				4A226BE717954CF000F9A12B /* lato */,
 				4A226BF317954CF000F9A12B /* Aller */,
-				4A226BE31795253500F9A12B /* profile-test@2x.png */,
-				4A226BE41795253500F9A12B /* topic-arrow@2x.png */,
-				4A226BDD1795252100F9A12B /* colour-bar_test@2x.png */,
-				4A226BDE1795252100F9A12B /* followers-bar@2x.png */,
-				4A226BDF1795252100F9A12B /* following-button@2x.png */,
 				4A226BB3179398C000F9A12B /* Assets */,
 				4A226B7B1793974F00F9A12B /* knotch-Info.plist */,
 				4A226B7C1793974F00F9A12B /* InfoPlist.strings */,
 				4A226B7F1793974F00F9A12B /* main.m */,
 				4A226B811793974F00F9A12B /* knotch-Prefix.pch */,
-				4A226B851793974F00F9A12B /* Default.png */,
-				4A226B871793974F00F9A12B /* Default@2x.png */,
-				4A226B891793974F00F9A12B /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -243,6 +236,14 @@
 		4A226BB3179398C000F9A12B /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				4A226B851793974F00F9A12B /* Default.png */,
+				4A226B871793974F00F9A12B /* Default@2x.png */,
+				4A226B891793974F00F9A12B /* Default-568h@2x.png */,
+				4A226BE31795253500F9A12B /* profile-test@2x.png */,
+				4A226BE41795253500F9A12B /* topic-arrow@2x.png */,
+				4A226BDD1795252100F9A12B /* colour-bar_test@2x.png */,
+				4A226BDE1795252100F9A12B /* followers-bar@2x.png */,
+				4A226BDF1795252100F9A12B /* following-button@2x.png */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -282,6 +283,13 @@
 			);
 			name = Aller;
 			path = ../Aller;
+			sourceTree = "<group>";
+		};
+		4A226CA91798F02500F9A12B /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
