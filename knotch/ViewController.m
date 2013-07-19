@@ -45,8 +45,7 @@
             self.profileArrayFromAFNetworking = [JSON objectForKey:@"userInfo"];
             NSLog(@"profile array %@", self.profileArrayFromAFNetworking);
             
-            
-            // Create sentiment to color dictionary
+            // Create profile dictionary (need to refactor this, issue w/ NSArray)
             self.profileDictionary = @{
                                      @"name": [JSON valueForKeyPath:@"userInfo.name"],
                                      @"location": [JSON valueForKeyPath:@"userInfo.location"],
@@ -96,7 +95,7 @@
     return [self.knotchesArrayFromAFNetworking count];
 }
 
-//// Change cell height [Default is 45]:
+// Adjust cell heights according to row value 
 //-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath*)indexPath
 //{
 //    if (indexPath.section == 0) {
@@ -112,32 +111,25 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    if (indexPath.section == 0) {
-//        if (indexPath.row < 2 ) {
-//            tableView.rowHeight = 417;
-//        }
-//    }else {
-//        tableView.rowHeight = 130;
-//    }
 
     static NSString *CellIdentifier = @"Cell";
-    
     
     CustomCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
 
     // Create dictionary with knotches data
     NSDictionary *knotchesDictionary= [self.knotchesArrayFromAFNetworking objectAtIndex:indexPath.row];
     
-    
+    // Get currentRow
     int currentRow = (int)indexPath.row;
     NSLog(@"Current row: %d", currentRow);
     
+    // Populate Profile Cell
     if (currentRow < 1)
     {
         
     // *** Profile Cell ***
     
-    // Profile
+    // Profile section
     cell.profileBackgroundImage.backgroundColor =  [UIColor colorWithRed:255.0f/255.0f
                                                                    green:204.0f/255.0f
                                                                     blue:67.0f/255.0f
@@ -145,7 +137,7 @@
     [cell.profileAvatar setImageWithURL:[NSURL URLWithString:[self.profileDictionary
                                              valueForKeyPath:@"profilePicUrl"]]];
 
-    // Stats
+    // Stats section
     cell.profileNameLabel.text      = [self.profileDictionary valueForKeyPath:@"name"];
     cell.profileNameLabel.font      = [UIFont fontWithName:@"Aller" size:17.5];
     cell.profileLocationLabel.text  = [self.profileDictionary valueForKeyPath:@"location"];
@@ -166,7 +158,7 @@
     cell.followingUnitLabel.text    = @"Following";
     cell.followingUnitLabel.font    = [UIFont fontWithName:@"Aller-Light" size:10];
     
-    // Colorgraphic
+    // Colorgraphic section
 
 //   Custom colorgraphic will be here
 //        if(tableView.contentOffset.y<0){
@@ -179,6 +171,7 @@
 //           // [self getMoreStuff:[self getLastMessageID]];
 //        }
     
+    // Populate Knotch Cell   
     } else if (currentRow > 1)
     {
         tableView.rowHeight = 130.0;
@@ -192,7 +185,7 @@
     cell.commentLabel.text = [knotchesDictionary objectForKey:@"comment"];
     cell.commentLabel.font = [UIFont fontWithName:@"Lato-Bold" size:15];
     
-    // Create sentiment to color dictionary
+    // Create sentiment dictionary
     NSDictionary *sentimentDictionary = @{
                                           @"0": @"0x2e5ca6",
                                           @"2": @"0x586db9",
@@ -215,7 +208,6 @@
     
     // Set comment's sentiment color background
     cell.commentBackground.backgroundColor = [self colorWithHexString:colorFromSentimentDictionary];
-    
     
     return cell;
 }
