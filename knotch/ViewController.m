@@ -15,7 +15,6 @@
     
 }
 @property (strong, nonatomic) NSDictionary *profileDictionary;
-
 @property (strong, nonatomic) NSArray *profileArrayFromAFNetworking;
 @property (strong, nonatomic) NSArray *knotchesArrayFromAFNetworking;
 
@@ -34,10 +33,11 @@
     self.knotchesArrayFromAFNetworking = [[NSArray alloc] init];
     self.profileDictionary =  [[NSDictionary alloc] init];
 	
-    // Initialize AFNetworking
+    // Setup url and request for AFNetworking
     NSURL *url = [NSURL URLWithString:@"http://dev.knotch.it:8080/miniProject/user_feed/500e3b57bbcd08696800000a/10"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
+    // Initialize AFNetworking
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request
         success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
             
