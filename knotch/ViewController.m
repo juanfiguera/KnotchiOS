@@ -259,7 +259,6 @@
             break;
     };
     
-    
     // Populate Profile Cell
     if (indexPath.row == 0) {
         NSLog(@"displaying profile");
