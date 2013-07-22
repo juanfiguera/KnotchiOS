@@ -32,6 +32,7 @@
 
 
 // *** Knotch Cell ***
+@property (retain, nonatomic) IBOutlet UILabel *quoteLabel;
 @property (retain, nonatomic) IBOutlet UILabel *topicLabel;
 @property (retain, nonatomic) IBOutlet UILabel *commentLabel;
 @property (retain, nonatomic) IBOutlet UIImageView *commentBackground;
